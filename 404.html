@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Nestly</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>try{var t=localStorage.getItem('nestly-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <style>
+    .nf { min-height: 100svh; display: grid; grid-template-columns: 1fr 632px; padding-top: 96px; }
+    .nf__content { display: flex; flex-direction: column; justify-content: center; gap: 48px; padding: 0 64px; }
+    .nf h1 { font-size: 64px; font-weight: 500; line-height: 1; }
+    .nf p { font-size: 20px; color: var(--muted-3); margin-top: 24px; }
+    .nf .pattern { min-height: 100%; }
+    @media (max-width: 1080px) { .nf { grid-template-columns: 1fr; padding-top: 80px; } .nf__content { padding: 120px 24px; } .nf .pattern { min-height: 320px; } }
+    @media (max-width: 767px) { .nf h1 { font-size: 48px; } }
+  </style>
+</head>
+<body>
+  <header class="nav is-solid">
+    <a class="logo" href="index.html"><svg class="i i--24"><use href="#f-office-building"/></svg><span>Nestly</span></a>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html#about">About</a><a href="index.html#gallery">Gallery</a><a href="index.html#features">Features</a><a href="index.html#reviews">Reviews</a><a href="index.html#pricing">Pricing</a>
+    </nav>
+    <div class="nav__actions"><a class="btn btn--outline" href="index.html#pricing">Reserve Now</a></div>
+  </header>
+  <main class="nf">
+    <div class="nf__content">
+      <div><h1>Oops, 404!</h1><p>The page you requested could not be found.</p></div>
+      <a class="btn btn--dark" href="index.html">Back to Home</a>
+    </div>
+    <div class="pattern" aria-hidden="true"><span class="logo-chip"><svg class="i"><use href="#f-office-building"/></svg>Nestly</span></div>
+  </main>
+  <script src="assets/js/icons.js"></script>
+  <script>
+    (function(){var o=window.NESTLY_ICONS||{},s='<svg style="position:absolute;width:0;height:0" aria-hidden="true">';for(var k in o)s+='<symbol id="'+k+'" viewBox="0 0 20 20">'+o[k]+'</symbol>';document.body.insertAdjacentHTML('afterbegin',s+'</svg>');})();
+  </script>
+</body>
+</html>

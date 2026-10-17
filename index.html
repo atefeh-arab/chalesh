@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nestly — Verified Apartments for Rent in Jakarta, Indonesia</title>
+  <meta name="description" content="Discover verified apartments in Jakarta with flexible rentals, transparent pricing and a responsive host — designed for students, families and young professionals.">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nestly — Find your perfect apartment, anytime!">
+  <meta property="og:description" content="Verified apartments with flexible rentals in Jakarta, Indonesia. From $850 / month.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect width='20' height='20' rx='5' fill='%232d5bff'/%3E%3Cpath d='M6 4.5h8v11h-2.5v-3h-3v3H6z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Theme before paint (no flash) + JS flag for reveal animations
+    (function () {
+      var d = document.documentElement; d.classList.add('js');
+      try { var t = localStorage.getItem('nestly-theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Apartment",
+    "name": "Nestly Apartment — Jakarta",
+    "description": "Verified 2-bedroom apartment with flexible monthly rentals.",
+    "numberOfRooms": 2,
+    "numberOfBathroomsTotal": 1,
+    "occupancy": { "@type": "QuantitativeValue", "maxValue": 6 },
+    "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.8, "reviewCount": 120 },
+    "amenityFeature": ["Free Wi-Fi", "TV and Streaming", "Air Conditioning", "Equipped Kitchen", "Safety Features", "Complete Essentials Kit"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Loader (Figma: Desktop - Loading) -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__box">
+      <svg class="i"><use href="#f-office-building"/></svg>
+      <p>Wait a moment ...</p>
+    </div>
+  </div>
+
+  <!-- ================= Header Nav ================= -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" aria-label="Nestly home">
+      <svg class="i i--24"><use href="#f-office-building"/></svg><span>Nestly</span>
+    </a>
+    <nav class="menu" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+        <svg class="i i-moon"><use href="#o-moon"/></svg><svg class="i i-sun"><use href="#o-sun"/></svg>
+      </button>
+      <a class="btn btn--outline" href="#pricing">Reserve Now</a>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" id="burger">
+        <svg class="i"><use href="#o-menu-alt-3"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu (Figma: Mobile - Apartment Landing Page / Open Menu) -->
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" inert>
+    <div class="drawer__overlay" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__main">
+        <div class="drawer__top">
+          <a class="logo" href="#top" data-close><svg class="i i--24"><use href="#f-office-building"/></svg><span>Nestly</span></a>
+          <button class="drawer__close" type="button" aria-label="Close menu" data-close><svg class="i"><use href="#o-x"/></svg></button>
+        </div>
+        <hr>
+        <nav class="menu" aria-label="Mobile">
+          <a href="#about" data-close>About</a>
+          <a href="#gallery" data-close>Gallery</a>
+          <a href="#features" data-close>Features</a>
+          <a href="#reviews" data-close>Reviews</a>
+          <a href="#pricing" data-close>Pricing</a>
+        </nav>
+        <hr>
+        <a class="btn btn--ghost" href="#pricing" data-close style="align-self:center">Reserve Now</a>
+      </div>
+      <div class="drawer__extra">
+        <hr>
+        <div class="stay-summary">
+          <div><strong>Jakarta, Indonesia</strong><span>2 bedrooms · 1 bathroom · Up to 6 guests</span></div>
+          <p class="price">$850<br>/ month</p>
+        </div>
+        <div class="support">
+          <h3><svg class="i"><use href="#o-support-lifebuoy"/></svg>Need a little guidance?</h3>
+          <p>Ask about dates, sleeping arrangements or arrival details before you reserve.</p>
+          <a href="/cdn-cgi/l/email-protection#731b161f03331d1600071f0a5d101c1e4c000611191610074e22061600071a1c1d56414312111c06075641431e0a5641430007120a"><svg class="i"><use href="#o-mail"/></svg><span>Message the host</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ================= 01 Hero ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-screen-label="01 Hero">
+      <img class="hero__bg" src="assets/img/hero.jpg" alt="" fetchpriority="high" width="1920" height="1280">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <span class="tag tag--glass"><svg class="i"><use href="#o-location-marker"/></svg>Jakarta, Indonesia</span>
+          <h1 id="hero-title">Find your perfect apartment,<br>Anytime!</h1>
+          <p class="hero__desc">Discover verified apartments with flexible rentals, designed for students, families, and young professionals.</p>
+        </div>
+        <div class="social-proof">
+          <div class="avatars" aria-hidden="true">
+            <img src="assets/img/avatar-1.jpg" alt="" width="28" height="28">
+            <img src="assets/img/avatar-2.jpg" alt="" width="28" height="28">
+            <img src="assets/img/avatar-3.jpg" alt="" width="28" height="28">
+          </div>
+          <p>Loved by 200+ happy guest</p>
+        </div>
+        <a class="btn btn--light" href="#pricing" style="align-self:center">Booking Now</a>
+      </div>
+    </section>
+
+    <!-- ================= 02 Why choose us ================= -->
+    <section class="section bg-soft why" id="about" aria-labelledby="why-title" data-screen-label="02 Why choose us">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="tag">Why Choose With Us?</span>
+          <h2 class="h2" id="why-title">Finding your next home<br>doesn’t have to be complicated.</h2>
+        </header>
+        <ul class="cards-4">
+          <li class="feature-card reveal"><svg class="i"><use href="#f-check-circle"/></svg><div><h3>Verified Listings</h3><p>Apartments reviewed for safety &amp; quality.</p></div></li>
+          <li class="feature-card reveal"><svg class="i"><use href="#f-phone"/></svg><div><h3>Easy Online Booking</h3><p>Simple and fast booking anytime.</p></div></li>
+          <li class="feature-card reveal"><svg class="i"><use href="#f-key"/></svg><div><h3>Flexible Rental Options</h3><p>Stay for a month, a year, or more.</p></div></li>
+          <li class="feature-card reveal"><svg class="i"><use href="#f-credit-card"/></svg><div><h3>Transparent Pricing</h3><p>No hidden fees, no surprises.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 03 Intro ================= -->
+    <section class="section intro" aria-labelledby="intro-title" data-screen-label="03 Intro">
+      <img class="cover" src="assets/img/intro.jpg" alt="" loading="lazy" width="1920" height="1080">
+      <div class="container">
+        <div class="intro__title reveal">
+          <span class="tag tag--glass">Introduction</span>
+          <h2 class="h2" id="intro-title">Guest Favorite Recommendation</h2>
+        </div>
+        <div class="keypoints reveal">
+          <div class="pt"><strong>100%</strong><span>Reply Rate</span></div>
+          <span class="vr" aria-hidden="true"></span>
+          <div class="pt"><strong>4.8<svg class="i i--32"><use href="#f-star-empty"/></svg></strong><span>Overall Rating</span></div>
+          <span class="vr" aria-hidden="true"></span>
+          <div class="pt"><strong data-count="120" data-suffix="+">120+</strong><span>Total Reviews</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 Quick Call ================= -->
+    <section class="section bg-white border-b host" aria-labelledby="host-title" data-screen-label="04 Meet the host">
+      <div class="container">
+        <div class="host__left">
+          <div class="host__head reveal">
+            <span class="tag tag--sky">Meet Our Apartment Host</span>
+            <div class="host__name">
+              <img src="assets/img/host-stephen.jpg" alt="Stephen, apartment host" width="56" height="56" loading="lazy">
+              <h2 class="h2" id="host-title">Hi, I’m Stephen.</h2>
+            </div>
+            <p>We simplify apartment hunting with transparency, flexibility, and comfort — so you can focus on living, not stressing.</p>
+            <a class="btn" href="tel:+21688901">Call Me Now<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+          </div>
+          <ul class="chips chips--host reveal">
+            <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-phone"/></svg></span>Responsive host</li>
+            <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-location-marker"/></svg></span>Great location</li>
+            <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-photograph"/></svg></span>Scenic and peaceful</li>
+            <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-tv"/></svg></span>Beautiful interior</li>
+            <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-key"/></svg></span>Great check-in</li>
+          </ul>
+        </div>
+        <div class="pattern" aria-hidden="true">
+          <span class="logo-chip"><svg class="i"><use href="#f-office-building"/></svg>Nestly</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 Gallery ================= -->
+    <section class="section bg-soft gallery" id="gallery" aria-labelledby="gallery-title" data-screen-label="05 Gallery">
+      <div class="container">
+        <header class="sec-head reveal">
+          <span class="tag">Gallery</span>
+          <h2 class="h2" id="gallery-title">Life Inside Our Apartments</h2>
+          <a class="btn" href="#pricing">Reserve Now<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+        </header>
+        <ul class="gallery__grid" id="galleryGrid">
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Dining Room photo"><img src="assets/img/gallery-dining.jpg" alt="Dining room with wooden table and chairs" loading="lazy" width="863" height="576"></button><figcaption>Dining Room</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Kitchen photo"><img src="assets/img/gallery-kitchen.jpg" alt="Bright kitchen with island and pendant lights" loading="lazy" width="863" height="573"></button><figcaption>Kitchen</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Interior photo"><img src="assets/img/gallery-interior.jpg" alt="Interior corner with yellow armchair" loading="lazy" width="864" height="762"></button><figcaption>Interior</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Living Room photo"><img src="assets/img/gallery-living.jpg" alt="Living room with sofa and coffee table" loading="lazy" width="864" height="486"></button><figcaption>Living Room</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Bedroom photo"><img src="assets/img/gallery-bedroom.jpg" alt="Bedroom with framed art above the bed" loading="lazy" width="864" height="762"></button><figcaption>Bedroom</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Bathroom photo"><img src="assets/img/gallery-bathroom.jpg" alt="Bathroom vanity with black faucet" loading="lazy" width="863" height="574"></button><figcaption>Bathroom</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Working Space photo"><img src="assets/img/gallery-working.jpg" alt="Open working space with lounge chairs" loading="lazy" width="864" height="576"></button><figcaption>Working Space</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Guest Bedroom photo"><img src="assets/img/gallery-guest-bedroom.jpg" alt="Guest bedroom with built-in desk" loading="lazy" width="864" height="486"></button><figcaption>Guest Bedroom</figcaption></figure></li>
+          <li><figure class="shot reveal"><button type="button" aria-label="Open Home Office photo"><img src="assets/img/gallery-home-office.jpg" alt="Compact home office nook" loading="lazy" width="864" height="691"></button><figcaption>Home Office</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 06 Space planning ================= -->
+    <section class="section bg-white module" aria-labelledby="space-title" data-screen-label="06 Space planning">
+      <div class="container">
+        <header class="mod-head reveal">
+          <span class="tag">Your stay, your way</span>
+          <div>
+            <h2 class="h2" id="space-title">Room for your plans.</h2>
+            <p class="body-16">A little planning makes sharing a home feel effortless. Get a sense of the space before you settle in.</p>
+          </div>
+        </header>
+        <div class="space">
+          <figure class="reveal">
+            <div class="img"><img src="assets/img/gallery-living.jpg" alt="Living room of the Nestly apartment" loading="lazy" width="864" height="486"></div>
+            <figcaption>A closer look at the living room • From our gallery</figcaption>
+          </figure>
+          <div class="space__info reveal">
+            <p class="context"><svg class="i"><use href="#o-office-building"/></svg>Your Nestly home in Jakarta, Indonesia</p>
+            <dl class="facts">
+              <div><dt>Bedrooms</dt><dd>2</dd></div>
+              <div><dt>Bathroom</dt><dd>1</dd></div>
+              <div><dt>Guests</dt><dd>Up to 6</dd></div>
+            </dl>
+            <hr class="hr">
+            <div class="stack-10">
+              <h3 class="title-24">Make space for everyone.</h3>
+              <p class="body-16">Travelling as a family or sharing with friends? Let the host know your group size and ask how the sleeping arrangements will work for everyone.</p>
+            </div>
+            <a class="btn" href="/cdn-cgi/l/email-protection#78101d140838161d0b0c1401561b1715470b0d1a121d1b0c45290d1d0b0c1117165d4a48191a170d0c5d4a480c101d5d4a480b08191b1d">Ask about the space<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 Facilities ================= -->
+    <section class="section bg-white facilities" id="features" aria-labelledby="fac-title" data-screen-label="07 Facilities">
+      <div class="container">
+        <div class="facilities__content">
+          <header class="sec-head sec-head--center reveal">
+            <span class="tag tag--brand">Features &amp; Facility</span>
+            <h2 class="h2" id="fac-title">Enjoy all the facilities we have.</h2>
+            <p>Discover a new way to find your perfect home with ease and clarity. Our platform offers a stress-free experience, allowing you to prioritize your lifestyle while we handle the details.</p>
+          </header>
+          <div class="facilities__details">
+            <div class="keybox reveal">
+              <div class="pt"><strong>2 bedrooms</strong><span>Master and a guest bedroom</span></div>
+              <span class="vr" aria-hidden="true"></span>
+              <div class="pt"><strong>1 bathroom</strong><span>Large shared bathroom</span></div>
+              <span class="vr" aria-hidden="true"></span>
+              <div class="pt"><strong>6 Guest</strong><span>For up to 6 people capacity</span></div>
+            </div>
+            <ul class="chips chips--center reveal">
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-wifi"/></svg></span>Free Wi-Fi</li>
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-tv"/></svg></span>TV and Streaming</li>
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-server"/></svg></span>Air Conditioning</li>
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-archive"/></svg></span>Equipped Kitchen</li>
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-shield-check"/></svg></span>Safety Features</li>
+              <li class="chip"><span class="chip__icon"><svg class="i"><use href="#o-wrench-screwdriver"/></svg></span>Complete Essentials Kit</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="banner reveal" aria-labelledby="banner-title">
+          <img class="cover" src="assets/img/banner.jpg" alt="" loading="lazy" width="1920" height="1280">
+          <span class="tag tag--glass">Special Offer</span>
+          <h2 class="h2" id="banner-title">Unlock Exclusive Deals on Your Next Apartment Stay!</h2>
+          <a class="btn" href="#pricing">Reserve Now<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 08 Local planning ================= -->
+    <section class="section bg-soft module" aria-labelledby="local-title" data-screen-label="08 Local planning">
+      <div class="container">
+        <header class="mod-head reveal">
+          <span class="tag">Around your new home</span>
+          <div>
+            <h2 class="h2" id="local-title">Make Jakarta your own.</h2>
+            <p class="body-16">Think beyond the apartment. Use these conversation starters to plan the everyday details of life in the city.</p>
+          </div>
+        </header>
+        <ul class="topics">
+          <li class="topic reveal"><svg class="i"><use href="#o-office-building"/></svg><div><h3>Daily essentials</h3><p>Ask the host where to find groceries, a pharmacy and laundry options that suit your routine.</p></div></li>
+          <li class="topic reveal"><svg class="i"><use href="#o-location-marker"/></svg><div><h3>Getting around</h3><p>Share the places you plan to visit. Confirm transport options and check your routes before setting out.</p></div></li>
+          <li class="topic reveal"><svg class="i"><use href="#o-photograph"/></svg><div><h3>Time to explore</h3><p>Looking for a favourite coffee spot or a place to unwind? Ask for local recommendations for your stay.</p></div></li>
+        </ul>
+        <div class="guidance reveal">
+          <div class="guidance__note">
+            <svg class="i"><use href="#o-location-marker"/></svg>
+            <div>
+              <h3>Start with the right address.</h3>
+              <p>Confirm the exact address, building entrance and travel route with the host before you arrive.</p>
+            </div>
+          </div>
+          <a class="btn" href="/cdn-cgi/l/email-protection#87efe2ebf7c7e9e2f4f3ebfea9e4e8eab8f4f2e5ede2e4f3bacbe8e4e6eba2b5b7f3eef7f4a2b5b7f7ebe2e6f4e2">Ask for local tips<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 09 Story ================= -->
+    <section class="section bg-white border-b story" id="reviews" aria-labelledby="story-title" data-screen-label="09 Testimonial">
+      <div class="container">
+        <div class="story__top reveal">
+          <div class="sec-head">
+            <span class="tag tag--brand">Testimonial</span>
+            <h2 class="h2" id="story-title">Hear story from Happy Customers</h2>
+          </div>
+          <p class="rating"><strong>4.8<svg class="i i--32"><use href="#f-star-empty"/></svg></strong><span>Overall Rating</span></p>
+        </div>
+        <figure class="story__card reveal">
+          <div class="story__text">
+            <span class="story__label"><svg class="i"><use href="#f-sparkles"/></svg>Customer Story</span>
+            <blockquote>“The booking process was so smooth. I found a modern apartment close to my office within a day. Couldn’t be happier!”</blockquote>
+            <figcaption><cite>Daniel M.,<br>Marketing Executive</cite></figcaption>
+          </div>
+          <div class="story__media">
+            <img src="assets/img/story-daniel.jpg" alt="Daniel M., Nestly resident" loading="lazy" width="1024" height="1024">
+            <span class="play" aria-hidden="true"><svg class="i i--32"><use href="#f-play"/></svg></span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 10 FAQ ================= -->
+    <section class="section bg-soft faq" id="faq" aria-labelledby="faq-title" data-screen-label="10 FAQ">
+      <div class="container">
+        <header class="sec-head sec-head--center reveal">
+          <span class="tag">Nestly FAQ</span>
+          <h2 class="h2" id="faq-title">We’re here to answer all<br>your questions.</h2>
+        </header>
+        <div class="faq__list reveal" id="faqList">
+          <details class="qa" name="faq">
+            <summary>How do I book an apartment?<span class="qa__icon" aria-hidden="true"><svg class="i"><use href="#f-arrow-down"/></svg></span></summary>
+            <div class="qa__body"><div><p>Pick your dates, send them to the host with your guest count, then confirm the booking online once availability is checked.</p></div></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary>Are utilities included in the rent?<span class="qa__icon" aria-hidden="true"><svg class="i"><use href="#f-arrow-down"/></svg></span></summary>
+            <div class="qa__body"><div><p>Yes — Wi-Fi, water and the essentials kit are included in the monthly price. Ask the host about electricity for long stays.</p></div></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary>Can I rent for just a few months?<span class="qa__icon" aria-hidden="true"><svg class="i"><use href="#f-arrow-down"/></svg></span></summary>
+            <div class="qa__body"><div><p>Absolutely. Stays start from one month, and you can extend to a year or more.</p></div></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary>Do you provide customer support?<span class="qa__icon" aria-hidden="true"><svg class="i"><use href="#f-arrow-down"/></svg></span></summary>
+            <div class="qa__body"><div><p>Our host keeps a 100% reply rate. Reach us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aea3aab686a8a3b5b2aabfe8a5a9ab">[email&#160;protected]</a> or +21-688901.</p></div></div>
+          </details>
+          <details class="qa" name="faq">
+            <summary>Do I need to pay a deposit?<span class="qa__icon" aria-hidden="true"><svg class="i"><use href="#f-arrow-down"/></svg></span></summary>
+            <div class="qa__body"><div><p>A refundable deposit may apply. The full payment breakdown is shared before you commit — no hidden fees.</p></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11 Move-in checklist ================= -->
+    <section class="section bg-white module" aria-labelledby="checklist-title" data-screen-label="11 Move-in checklist">
+      <div class="container">
+        <header class="mod-head reveal">
+          <span class="tag">Before you reserve</span>
+          <div>
+            <h2 class="h2" id="checklist-title">A smoother start to your stay.</h2>
+            <p class="body-16">From your first question to picking up the keys, keep the important details together with this simple checklist.</p>
+          </div>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step__mark"><span>01</span><svg class="i"><use href="#o-mail"/></svg></div>
+            <div><h3 class="title-24">Share your plans</h3><p class="body-16">Prepare your preferred dates, length of stay and number of guests. Mention any access or sleeping needs.</p></div>
+            <small>Have ready: dates + guest count</small>
+          </li>
+          <li class="step reveal">
+            <div class="step__mark"><span>02</span><svg class="i"><use href="#o-credit-card"/></svg></div>
+            <div><h3 class="title-24">Review the details</h3><p class="body-16">Confirm availability, the full payment breakdown, any deposit and the cancellation terms before committing.</p></div>
+            <small>Check: inclusions + rental terms</small>
+          </li>
+          <li class="step reveal">
+            <div class="step__mark"><span>03</span><svg class="i"><use href="#o-key"/></svg></div>
+            <div><h3 class="title-24">Plan your arrival</h3><p class="body-16">Agree on arrival timing and ask how to collect the keys. Save the address and check-in instructions for the journey.</p></div>
+            <small>Save: address + access instructions</small>
+          </li>
+        </ol>
+        <div class="prompt reveal">
+          <div>
+            <h3>A few details. A clearer conversation.</h3>
+            <p>Send your dates and questions to the host before making your decision.</p>
+          </div>
+          <a class="btn" href="/cdn-cgi/l/email-protection#563e333a2616383325223a2f7835393b692523343c3335226b1439393d3f3831736466333827233f242f">Message the host<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 12 Pricing ================= -->
+    <section class="section pricing" id="pricing" aria-labelledby="price-title" data-screen-label="12 Pricing">
+      <div class="container">
+        <div class="pricing__body">
+          <div class="pricing__copy reveal">
+            <div>
+              <span class="tag tag--glass">Monthly Pricing</span>
+              <h2 class="pricing__price" id="price-title">$850 / month</h2>
+              <p>Flexible stay, all essentials included. From students to families, we offer rental options that fit your lifestyle and budget.</p>
+            </div>
+            <a class="btn btn--light" href="/cdn-cgi/l/email-protection#335b565f43735d5640475f4a1d505c5e0c404651595650470e715c5c585a5d5416010341564246564047160103167601160b03160a071601031601070b06031601031601751601035e5c5d475b">Booking Now</a>
+          </div>
+          <div class="pricing__img reveal"><img src="assets/img/pricing.jpg" alt="Cosy living room with orange sofa" loading="lazy" width="800" height="800"></div>
+        </div>
+        <hr>
+        <div class="map reveal"><img src="assets/img/map-jakarta.png" alt="Map of Jakarta showing the apartment area" loading="lazy" width="1280" height="930"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 13 Footer ================= -->
+  <footer class="footer" data-screen-label="13 Footer">
+    <div class="container">
+      <hr class="hr" style="background:var(--line-3)">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="brand-row">
+            <p>Modern Living,<br>Hassle-Free.</p>
+            <a class="btn" href="#top">Back to Top<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+          </div>
+          <dl class="contacts">
+            <div><dt><svg class="i i--12"><use href="#o-phone"/></svg>PHONE NUMBER</dt><dd><a href="tel:+21688901">+21-688901</a></dd></div>
+            <div><dt><svg class="i i--12"><use href="#o-mail"/></svg>EMAIL</dt><dd><a href="/cdn-cgi/l/email-protection#6b030e071b2b050e181f071245080406"><span class="__cf_email__" data-cfemail="670f020b1727090214130b1e4904080a">[email&#160;protected]</span></a></dd></div>
+          </dl>
+        </div>
+        <div class="footer__nav">
+          <a class="btn" href="#top">Back to Top<svg class="i i--16"><use href="#o-arrow-right"/></svg></a>
+          <nav class="footer__menu" aria-labelledby="ql">
+            <h2 id="ql">Quick Link</h2>
+            <div class="footer__links">
+              <a href="#about">About</a><a href="#gallery">Gallery</a><a href="#features">Features</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="pattern" aria-hidden="true" style="height:320px">
+        <span class="logo-chip"><svg class="i"><use href="#f-office-building"/></svg>Nestly</span>
+      </div>
+      <hr class="hr" style="background:var(--line-3)">
+    </div>
+  </footer>
+
+  <!-- Gallery lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button class="icon-btn lightbox__close" type="button" aria-label="Close" data-lb="close"><svg class="i"><use href="#o-x"/></svg></button>
+    <figure class="lightbox__fig">
+      <img id="lbImg" alt="">
+      <div class="lightbox__bar">
+        <figcaption><span id="lbCap"></span><small id="lbCount"></small></figcaption>
+        <div class="lightbox__ctrl">
+          <button class="icon-btn prev" type="button" aria-label="Previous photo" data-lb="prev"><svg class="i"><use href="#o-arrow-right"/></svg></button>
+          <button class="icon-btn" type="button" aria-label="Next photo" data-lb="next"><svg class="i"><use href="#o-arrow-right"/></svg></button>
+        </div>
+      </div>
+    </figure>
+  </dialog>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
