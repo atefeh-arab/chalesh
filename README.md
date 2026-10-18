@@ -14,7 +14,8 @@ A pixel-faithful front-end build of the **"Nestly – Apartment Landing Page UI 
 │   ├── css/styles.css    # Design tokens + desktop / tablet / mobile + dark mode
 │   ├── js/main.js        # Nav, mobile menu, scroll-spy, lightbox, FAQ, theme, reveal
 │   ├── js/icons.js       # SVG paths exported 1:1 from the Figma icon set
-│   └── img/              # Images exported from the .fig (hero, gallery, map…)
+│   ├── img/              # Images exported from the .fig (hero, gallery, map…)
+│   └── video/            # Customer-story MP4 (self-hosted; Git LFS disabled)
 ├── WORKLOG.md            # Daily work log
 └── README.md
 ```
@@ -62,6 +63,10 @@ Then open `http://localhost:5173`.
 - ✅ Respects `prefers-reduced-motion`
 - ✅ SEO: meta/OG tags, JSON-LD `Apartment` schema, semantic landmarks, alt text, lazy images
 
+## Media credits
+- **Customer-story video** (`assets/video/apartment-sunrise.mp4`): *Modern Apartment Buildings Sunrise* by **Erik Furulund**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), sourced from [archive.org](https://archive.org/details/modernapartmentbuildingssunrise). Credit is also shown in the player UI.
+
 ## Deploy
 **GitHub Pages:** push to `main` → Settings → Pages → *Deploy from branch* `main` / root.
+> Git LFS is **disabled** on purpose: GitHub Pages serves LFS pointers instead of the real files, which silently breaks images, video and fonts on the live site.
 **Netlify / Vercel:** import the repo; framework = *Other*; build command empty; output dir `.`.

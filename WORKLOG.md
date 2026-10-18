@@ -21,6 +21,14 @@
 - SEO and accessibility pass: meta/OG tags, JSON-LD, alt text, focus states, reduced motion.
 - 404 page, README, deployment.
 
+## Day 5
+- Fixed the live site: GitHub Pages was publishing Git LFS *pointers* instead of the photos, so every image was a ~130-byte text file. Un-tracked the LFS patterns and committed the real bytes.
+- Replaced Cloudflare's obfuscated `/cdn-cgi/l/email-protection#…` links with plain `mailto:` links and dropped the leftover script tag.
+- Made the “Customer Story” play button real: it now opens a `<dialog>` with a self-hosted MP4 that autoplays (controls, Esc to close, focus returns to the button).
+  - Clip: *Modern Apartment Buildings Sunrise* by Erik Furulund (CC BY 4.0, archive.org) — 853×480, 59 s, 5.3 MB, committed to `assets/video/`.
+  - Inspected candidate clips frame-by-frame in a headless browser before picking; the two AI-generated “royalty free” clips were discarded as unusable.
+
 ## Next
-- Push to GitHub and enable Pages → add the live URL to the README.
+- Add a GitHub Actions workflow so every push redeploys Pages.
 - Run Lighthouse on the deployed URL and log the scores here.
+- Self-hosted Persian web font (licensing still to be confirmed by the owner).

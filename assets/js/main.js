@@ -145,4 +145,28 @@
     if (e.key === 'ArrowLeft') show(idx - 1);
   });
   lb.addEventListener('close', function () { doc.body.style.overflow = ''; if (opener) opener.focus(); });
+
+  /* ---------- Customer story video (the play button is not decorative) ---------- */
+  var vb = doc.getElementById('videoBox');
+  var vid = doc.getElementById('storyVideo');
+  var vPlay = doc.getElementById('storyPlay');
+  var vOpener = null;
+  if (vb && vid && vPlay) {
+    vPlay.addEventListener('click', function () {
+      vOpener = vPlay;
+      if (vb.showModal) vb.showModal(); else vb.setAttribute('open', '');
+      doc.body.style.overflow = 'hidden';
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () { /* autoplay refused: controls stay available */ });
+    });
+    vb.addEventListener('click', function (e) {
+      if (e.target === vb || e.target.closest('[data-vb]')) vb.close();
+    });
+    vb.addEventListener('close', function () {
+      vid.pause();
+      try { vid.currentTime = 0; } catch (err) {}
+      doc.body.style.overflow = '';
+      if (vOpener) vOpener.focus();
+    });
+  }
 })();

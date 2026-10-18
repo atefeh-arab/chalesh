@@ -327,7 +327,7 @@
           </div>
           <div class="story__media">
             <img src="assets/img/story-daniel.jpg" alt="Daniel M., Nestly resident" loading="lazy" width="1024" height="1024">
-            <span class="play" aria-hidden="true"><svg class="i i--32"><use href="#f-play"/></svg></span>
+            <button class="play" type="button" id="storyPlay" aria-label="Play Daniel’s story video"><svg class="i i--32"><use href="#f-play"/></svg></button>
           </div>
         </figure>
       </div>
@@ -465,6 +465,20 @@
           <button class="icon-btn prev" type="button" aria-label="Previous photo" data-lb="prev"><svg class="i"><use href="#o-arrow-right"/></svg></button>
           <button class="icon-btn" type="button" aria-label="Next photo" data-lb="next"><svg class="i"><use href="#o-arrow-right"/></svg></button>
         </div>
+      </div>
+    </figure>
+  </dialog>
+
+  <!-- Customer story video -->
+  <dialog class="lightbox" id="videoBox" aria-label="Customer story video">
+    <button class="icon-btn lightbox__close" type="button" aria-label="Close" data-vb="close"><svg class="i"><use href="#o-x"/></svg></button>
+    <figure class="lightbox__fig">
+      <video id="storyVideo" controls playsinline loop preload="none" poster="assets/img/story-daniel.jpg" width="854" height="480">
+        <source src="assets/video/apartment-sunrise.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="lightbox__bar">
+        <figcaption>Happy days at Nestly<small>Video: Erik Furulund · “Modern Apartment Buildings Sunrise” · CC BY 4.0</small></figcaption>
       </div>
     </figure>
   </dialog>
