@@ -3,7 +3,7 @@
 A pixel-faithful front-end build of the **"Nestly – Apartment Landing Page UI Kit"** Figma file: plain HTML + CSS + vanilla JS, with no build step and no dependencies.
 
 ## Demo
-- Live: `https://<your-username>.github.io/nestly/` *(see "Deploy" below)*
+- Live: https://atefeh-arab.github.io/chalesh/ (GitHub Pages, built from `main`)
 
 ## Project structure
 ```
