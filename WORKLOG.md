@@ -27,8 +27,13 @@
 - Made the “Customer Story” play button real: it now opens a `<dialog>` with a self-hosted MP4 that autoplays (controls, Esc to close, focus returns to the button).
   - Clip: *Modern Apartment Buildings Sunrise* by Erik Furulund (CC BY 4.0, archive.org) — 853×480, 59 s, 5.3 MB, committed to `assets/video/`.
   - Inspected candidate clips frame-by-frame in a headless browser before picking; the two AI-generated “royalty free” clips were discarded as unusable.
+- Font swap: dropped the Google Fonts (Manrope) request entirely — the page now uses only fonts from the owner's approved list.
+  - Added `@font-face` slots for **Yekan Bakh 3** (400/500) in `assets/fonts/` with woff2 + ttf fallbacks; the page uses the system UI font until the licensed files are added.
+  - Wired the owner's **Iranian Sans** woff (found in Downloads) as a `unicode-range`-gated face: Persian/Arabic glyphs only, so the English copy is untouched and the file isn't even downloaded unless Persian text appears. Verified the face flips `loaded` on a Persian probe.
+  - Documented file names + the web-licence caveat in `assets/fonts/README.md`.
+- Added `.github/workflows/deploy-pages.yml` so every push to `main` republishes Pages through `actions/deploy-pages`.
 
 ## Next
-- Add a GitHub Actions workflow so every push redeploys Pages.
 - Run Lighthouse on the deployed URL and log the scores here.
-- Self-hosted Persian web font (licensing still to be confirmed by the owner).
+- Custom domain for Pages (needs a domain name from the owner).
+- Owner to drop the full Yekan Bakh 3 files into `assets/fonts/` (licence purchase/confirmation pending).

@@ -15,6 +15,7 @@ A pixel-faithful front-end build of the **"Nestly – Apartment Landing Page UI 
 │   ├── js/main.js        # Nav, mobile menu, scroll-spy, lightbox, FAQ, theme, reveal
 │   ├── js/icons.js       # SVG paths exported 1:1 from the Figma icon set
 │   ├── img/              # Images exported from the .fig (hero, gallery, map…)
+│   ├── fonts/            # Self-hosted web fonts (see assets/fonts/README.md)
 │   └── video/            # Customer-story MP4 (self-hosted; Git LFS disabled)
 ├── WORKLOG.md            # Daily work log
 └── README.md
@@ -48,7 +49,7 @@ Then open `http://localhost:5173`.
 | 14 | Footer | `Footer` |
 
 ## Design tokens (from Figma)
-- **Font:** Manrope 400 / 500
+- **Font:** Yekan Bakh 3 (400 / 500), self-hosted from the owner's approved font list — no third-party font requests. Falls back to the system UI font until the licensed files are dropped into `assets/fonts/`; Persian/Arabic glyphs render with the bundled Iranian Sans subset (`unicode-range` gated, see `assets/fonts/README.md`).
 - **Colours:** Ink `#1A1A1A`, Brand `#2D5BFF`, Brand-soft `#EAEEFF`, Soft bg `#F5F5F5`, Tag `#EAEAEA`, Muted `#707070 / #848484 / #999999`, Lines `#D6D6D6 / #D5CECE / #EAEAEA`
 - **Layout:** 1440 → padding 64 · 1024 → 32 · 440 → 24; section padding-y 100; content max-width 1312
 - **Radii:** pills/buttons 100, gallery 24, banner/pricing images 40
@@ -67,6 +68,6 @@ Then open `http://localhost:5173`.
 - **Customer-story video** (`assets/video/apartment-sunrise.mp4`): *Modern Apartment Buildings Sunrise* by **Erik Furulund**, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), sourced from [archive.org](https://archive.org/details/modernapartmentbuildingssunrise). Credit is also shown in the player UI.
 
 ## Deploy
-**GitHub Pages:** push to `main` → Settings → Pages → *Deploy from branch* `main` / root.
+**GitHub Pages:** push to `main` → the `Deploy to GitHub Pages` workflow (`.github/workflows/deploy-pages.yml`) builds the artifact and publishes it.
 > Git LFS is **disabled** on purpose: GitHub Pages serves LFS pointers instead of the real files, which silently breaks images, video and fonts on the live site.
 **Netlify / Vercel:** import the repo; framework = *Other*; build command empty; output dir `.`.
