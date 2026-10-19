@@ -32,6 +32,16 @@
   font-weight: 500; font-style: normal; font-display: swap;
 }
 
+/* Persian/Arabic glyphs — Iranian Sans subset shipped in the repo.
+   unicode-range keeps it off the English copy (no download unless
+   Persian text is actually on the page). */
+@font-face {
+  font-family: "Iranian Sans";
+  src: url("../fonts/IranianSans-Persian.woff") format("woff");
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F;
+}
+
 /* ---------- Tokens (Figma "Colors Token") ---------- */
 :root {
   --white: #ffffff;          /* Neutral / White / 100 – page background   */
@@ -53,7 +63,7 @@
   --pricing-bg: #1a1a1a;
   --pattern-filter: none;
 
-  --font: "Yekan Bakh 3", "IranSans X", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Yekan Bakh 3", "Iranian Sans", "IranSans X", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --pad-x: 64px;             /* desktop 64 · tablet 32 · mobile 24 */
   --pad-y: 100px;
   --maxw: 1312px;
