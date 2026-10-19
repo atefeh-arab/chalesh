@@ -4,6 +4,34 @@
    Breakpoints: Desktop 1440 · Tablet 1024 · Mobile 440 (fluid between)
    ========================================================================== */
 
+/* ---------- Self-hosted font: Yekan Bakh 3 (from the approved Fontpoly list) ----------
+   Drop the licensed files into assets/fonts/ with these exact names:
+     YekanBakh3-Regular.woff2  (weight 400)  — fallback: YekanBakh3-Regular.ttf
+     YekanBakh3-Medium.woff2   (weight 500)  — fallback: YekanBakh3-Medium.ttf
+   Until the files exist the page falls back to the system UI font.
+   To use another family from the list (e.g. IranSans X), duplicate these
+   blocks, change the file names and update --font below.                  */
+@font-face {
+  font-family: "Yekan Bakh 3";
+  src: local("Yekan Bakh 3"), url("../fonts/YekanBakh3-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Yekan Bakh 3";
+  src: local("Yekan Bakh 3"), url("../fonts/YekanBakh3-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Yekan Bakh 3";
+  src: local("Yekan Bakh 3 Medium"), url("../fonts/YekanBakh3-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Yekan Bakh 3";
+  src: local("Yekan Bakh 3 Medium"), url("../fonts/YekanBakh3-Medium.ttf") format("truetype");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+
 /* ---------- Tokens (Figma "Colors Token") ---------- */
 :root {
   --white: #ffffff;          /* Neutral / White / 100 – page background   */
@@ -25,7 +53,7 @@
   --pricing-bg: #1a1a1a;
   --pattern-filter: none;
 
-  --font: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Yekan Bakh 3", "IranSans X", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --pad-x: 64px;             /* desktop 64 · tablet 32 · mobile 24 */
   --pad-y: 100px;
   --maxw: 1312px;
